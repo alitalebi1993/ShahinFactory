@@ -10,5 +10,6 @@ namespace FactoryShahin.test
     {
         string a = "";
         string ali = "";
+        int l=0;
     }
 }
