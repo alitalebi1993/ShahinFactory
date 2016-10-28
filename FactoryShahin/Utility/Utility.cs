@@ -1,21 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data.SqlClient;
+using System.Drawing;
 using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
-namespace Utility
+namespace System.Windows.Forms
 {
-    using System;
-    using System.Drawing;
-    using System.Drawing.Drawing2D;
-    using System.Windows.Forms;
-
-    
     class Utility
     {
         public static string ConvertDateToHijrie2(DateTime date)
@@ -34,9 +28,9 @@ namespace Utility
         {
             foreach (var item in list)
             {
-                if (item.Text == "" && item.AccessibleDescription!="")
+                if (item.Text == "" && item.AccessibleDescription != "")
                 {
-                    BeheshtMBox.Show(item.AccessibleDescription+" "+"نمیتواند خالی بماند !", "هشدار", BeheshtMBox.Icon.Warning, BeheshtMBox.MessageType.OK);
+                    //BeheshtMBox.Show(item.AccessibleDescription + " " + "نمیتواند خالی بماند !", "هشدار", BeheshtMBox.Icon.Warning, BeheshtMBox.MessageType.OK);
                     return false;
                 }
             }
@@ -142,6 +136,27 @@ namespace Utility
             catch (FormatException)
             {
                 return 0;
+            }
+        }
+    }
+    public class MyGridview : DataGridView
+    {
+        public MyGridview()
+        {
+            this.AutoGenerateColumns = false;
+            this.CellPainting += MyGridview_CellPainting;
+
+        }
+
+        void MyGridview_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            if (e.RowIndex == -1)
+            {
+                //e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+                //Image m = new Bitmap(ShahinShoese.Properties.Resources.images, new Size(e.CellBounds.Width, e.CellBounds.Height));
+                //e.Graphics.DrawImage(m, e.CellBounds);
+                //e.Paint(e.CellBounds, DataGridViewPaintParts.ContentForeground);
+                //e.Handled = true;
             }
         }
     }
