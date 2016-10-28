@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
-namespace ShahinShoese
+namespace FactoryShahin
 {
 
 
@@ -35,6 +36,7 @@ namespace ShahinShoese
         {
         }
         public virtual int ProductUnitID { get; set; }
+        [DisplayName("نام واحد محصول")]
         public virtual string ProductUnitName { get; set; }
         public virtual ICollection<Product> Product { get; set; }
     }
@@ -44,6 +46,7 @@ namespace ShahinShoese
         {
         }
         public virtual int ProductTypeID { get; set; }
+        [DisplayName("نام نوع محصول")]
         public virtual string ProductTypeName { get; set; }
         public virtual ICollection<Product> Product { get; set; }
     }
@@ -53,6 +56,7 @@ namespace ShahinShoese
         {
         }
         public virtual int StoreID { get; set; }
+        [DisplayName("نام انبار")]
         public virtual string StoreName { get; set; }
         public virtual ICollection<Product> Product { get; set; }
     }
@@ -85,6 +89,7 @@ namespace ShahinShoese
         {
         }
         public virtual int SizeID { get; set; }
+        [DisplayName("نام سایز")]
         public virtual int SizeNumber { get; set; }
         public virtual ICollection<Stock> Stock { get; set; }
     }
@@ -126,10 +131,14 @@ namespace ShahinShoese
         {
         }
         public virtual int CustomerID { get; set; }
+        [DisplayName("نام مشتری")]
         public virtual string CustomerName { get; set; }
+        [DisplayName("ادرس")]
         public virtual string Address { get; set; }
+        [DisplayName("BALANCE")]
         public virtual long Balance { get; set; }
         public virtual int CustomerTypeID { get; set; }
+        [DisplayName("نوع مشتری")]
         public virtual CustomerType CustomerType { get; set; }
         public virtual ICollection<Factor> Factor { get; set; }
         public virtual ICollection<CustomerStock> CustomerStock { get; set; }
@@ -140,6 +149,7 @@ namespace ShahinShoese
         {
         }
         public virtual int CustomerTypeID { get; set; }
+        [DisplayName("نام نوع مشتری")]
         public virtual string CustomerTypeName { get; set; }
         public virtual ICollection<Customer> Customer { get; set; }
     }

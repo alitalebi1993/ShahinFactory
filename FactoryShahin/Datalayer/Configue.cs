@@ -4,7 +4,7 @@ using System.Data.Entity.ModelConfiguration;
 using System.Linq;
 using System.Text;
 using ParkingDatabase;
-using ShahinShoese;
+using FactoryShahin;
 namespace ShahinDataBaseConfigue
 {
     public class ConfigueProduct : EntityTypeConfiguration<Product>
