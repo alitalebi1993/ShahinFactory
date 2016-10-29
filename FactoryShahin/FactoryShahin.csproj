@@ -33,26 +33,11 @@
   </PropertyGroup>
   <PropertyGroup />
   <ItemGroup>
-    <Reference Include="Animator">
-      <HintPath>..\..\..\..\Desktop\RoutYar\RoutYar\bin\Debug\Animator.dll</HintPath>
-    </Reference>
-    <Reference Include="BehComponents">
-      <HintPath>..\..\..\..\Desktop\RoutYar\RoutYar\bin\Debug\BehComponents.dll</HintPath>
-    </Reference>
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
-    <Reference Include="FarsiCalendarComponent">
-      <HintPath>..\..\..\..\Desktop\RoutYar\RoutYar\bin\Debug\FarsiCalendarComponent.dll</HintPath>
-    </Reference>
-    <Reference Include="Ftp">
-      <HintPath>..\..\..\..\Desktop\RoutYar\RoutYar\bin\Debug\Ftp.dll</HintPath>
-    </Reference>
-    <Reference Include="FTPHelper">
-      <HintPath>..\..\..\..\Desktop\RoutYar\RoutYar\bin\Debug\FTPHelper.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -68,9 +53,6 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="t-ftp">
-      <HintPath>..\..\..\..\Desktop\RoutYar\RoutYar\bin\Debug\t-ftp.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datalayer\Configue.cs" />
@@ -91,7 +73,9 @@
     <Compile Include="Utility\ErrorHandler.cs" />
     <Compile Include="Utility\Security.cs" />
     <Compile Include="Utility\SqlServerErrorManagment.cs" />
-    <Compile Include="Utility\Utility.cs" />
+    <Compile Include="Utility\Utility.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="View\FormBase.cs">
       <SubType>Form</SubType>
     </Compile>
