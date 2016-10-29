@@ -90,7 +90,6 @@
     <Compile Include="Utility\ClassFTP.cs" />
     <Compile Include="Utility\ErrorHandler.cs" />
     <Compile Include="Utility\Security.cs" />
-    <Compile Include="Utility\SecurityClass.cs" />
     <Compile Include="Utility\SqlServerErrorManagment.cs" />
     <Compile Include="Utility\Utility.cs" />
     <Compile Include="View\FormBase.cs">

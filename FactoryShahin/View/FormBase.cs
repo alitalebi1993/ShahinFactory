@@ -327,7 +327,7 @@ namespace BaseForms
         private void Tbox_KeyPressInt32(object sender, KeyPressEventArgs e)
         {
             var TextBox = sender as TextBox;
-            long meghdar = Utility.Utility.ConvertCommaPrice(TextBox.Text);
+            long meghdar = System.Windows.Forms.Utility.ConvertCommaPrice(TextBox.Text);
             if (TextBox.Text.Length >= 8)
             {
                 TextBox.Text = TextBox.Text.Substring(0, 8);
@@ -344,7 +344,7 @@ namespace BaseForms
             TextBox Tbox = sender as TextBox;
             if (Tbox.Text != "" && Tbox.Text != Tbox.Name)
             {
-                Tbox.Text = Utility.Utility.ConvertPrice(Utility.Utility.ConvertCommaPrice(Tbox.Text).ToString());
+                Tbox.Text = System.Windows.Forms.Utility.ConvertPrice(System.Windows.Forms.Utility.ConvertCommaPrice(Tbox.Text).ToString());
                 Tbox.Select(Tbox.Text.Length, 0);
             }
         }
@@ -376,7 +376,7 @@ namespace BaseForms
                 if (!Tbox.AccessibleDescription.Contains("Price"))
                     Entity.GetType().GetProperties().FirstOrDefault(p => p.Name == Tbox.AccessibleDescription).SetValue(Entity, Convert.ChangeType(Tbox.Text, Type.GetType(Tbox.Tag.ToString())));
                 else
-                    Entity.GetType().GetProperties().FirstOrDefault(p => p.Name == Tbox.AccessibleDescription).SetValue(Entity, Utility.Utility.ConvertCommaPrice(Tbox.Text));
+                    Entity.GetType().GetProperties().FirstOrDefault(p => p.Name == Tbox.AccessibleDescription).SetValue(Entity, System.Windows.Forms.Utility.ConvertCommaPrice(Tbox.Text));
             }
             foreach (ArisaButtonImage AB in PanelContent.Controls.OfType<ArisaButtonImage>())
             {
