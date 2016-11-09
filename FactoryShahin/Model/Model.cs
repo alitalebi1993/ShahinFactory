@@ -11,7 +11,7 @@ namespace FactoryShahin
     {
         public Product()
         {
-
+            
         }
         public virtual int ProductID { get; set; }
         public virtual string ProductDescription { get; set; }
@@ -39,6 +39,10 @@ namespace FactoryShahin
         [DisplayName("نام واحد محصول")]
         public virtual string ProductUnitName { get; set; }
         public virtual ICollection<Product> Product { get; set; }
+        public override string ToString()
+        {
+            return ProductUnitName;
+        }
     }
     public class ProductType
     {
@@ -49,6 +53,10 @@ namespace FactoryShahin
         [DisplayName("نام نوع محصول")]
         public virtual string ProductTypeName { get; set; }
         public virtual ICollection<Product> Product { get; set; }
+        public override string ToString()
+        {
+            return ProductTypeName;
+        }
     }
     public class Store
     {
@@ -59,6 +67,10 @@ namespace FactoryShahin
         [DisplayName("نام انبار")]
         public virtual string StoreName { get; set; }
         public virtual ICollection<Product> Product { get; set; }
+        public override string ToString()
+        {
+            return StoreName;
+        }
     }
     public class Stock
     {
@@ -66,16 +78,10 @@ namespace FactoryShahin
         {
         }
         public virtual int StockID { get; set; }
-        public virtual int SalePrice { get; set; }
-        public virtual int UnitPrice { get; set; }
+        public virtual long SalePrice { get; set; }
+        public virtual long UnitPrice { get; set; }
+        public virtual int Count { get; set; }
         public virtual string Description { get; set; }
-        
-        
-
-
-
-
-
         public virtual int ProductID { get; set; }
         public virtual Product Product { get; set; }
         public virtual int SizeID { get; set; }
@@ -92,6 +98,10 @@ namespace FactoryShahin
         [DisplayName("نام سایز")]
         public virtual int SizeNumber { get; set; }
         public virtual ICollection<Stock> Stock { get; set; }
+        public override string ToString()
+        {
+            return SizeNumber.ToString();
+        }
     }
     public class CustomerStock
     {

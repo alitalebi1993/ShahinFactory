@@ -112,6 +112,12 @@
     <Compile Include="View\FormMessageBox.Designer.cs">
       <DependentUpon>FormMessageBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FormRegisterProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormRegisterProduct.Designer.cs">
+      <DependentUpon>FormRegisterProduct.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -127,6 +133,9 @@
     </Compile>
     <EmbeddedResource Include="View\FormBase.resx">
       <DependentUpon>FormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormRegisterProduct.resx">
+      <DependentUpon>FormRegisterProduct.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -177,6 +186,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\256add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

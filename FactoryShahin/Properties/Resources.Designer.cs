@@ -63,6 +63,16 @@ namespace FactoryShahin.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _256add {
+            get {
+                object obj = ResourceManager.GetObject("_256add", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Back {
             get {
                 object obj = ResourceManager.GetObject("Back", resourceCulture);
@@ -156,6 +166,16 @@ namespace FactoryShahin.Properties {
         internal static System.Drawing.Bitmap Question {
             get {
                 object obj = ResourceManager.GetObject("Question", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap save {
+            get {
+                object obj = ResourceManager.GetObject("save", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

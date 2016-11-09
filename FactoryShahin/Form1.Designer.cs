@@ -37,6 +37,7 @@
             this.تعریفنوعمحصولToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.تعریفنوعمشترToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.تعریفمشتریToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ثبتمحصولToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,7 +72,8 @@
             this.تعریفواحدمحصولToolStripMenuItem,
             this.تعریفنوعمحصولToolStripMenuItem,
             this.تعریفنوعمشترToolStripMenuItem,
-            this.تعریفمشتریToolStripMenuItem});
+            this.تعریفمشتریToolStripMenuItem,
+            this.ثبتمحصولToolStripMenuItem});
             this.اطلاعاتپایهToolStripMenuItem.Name = "اطلاعاتپایهToolStripMenuItem";
             this.اطلاعاتپایهToolStripMenuItem.Size = new System.Drawing.Size(100, 24);
             this.اطلاعاتپایهToolStripMenuItem.Text = "اطلاعات پایه";
@@ -118,6 +120,13 @@
             this.تعریفمشتریToolStripMenuItem.Text = "تعریف مشتری";
             this.تعریفمشتریToolStripMenuItem.Click += new System.EventHandler(this.تعریفمشتریToolStripMenuItem_Click);
             // 
+            // ثبتمحصولToolStripMenuItem
+            // 
+            this.ثبتمحصولToolStripMenuItem.Name = "ثبتمحصولToolStripMenuItem";
+            this.ثبتمحصولToolStripMenuItem.Size = new System.Drawing.Size(207, 24);
+            this.ثبتمحصولToolStripMenuItem.Text = "ثبت محصول";
+            this.ثبتمحصولToolStripMenuItem.Click += new System.EventHandler(this.ثبتمحصولToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -148,6 +157,7 @@
         private System.Windows.Forms.ToolStripMenuItem تعریفنوعمحصولToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem تعریفنوعمشترToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem تعریفمشتریToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ثبتمحصولToolStripMenuItem;
     }
 }
 

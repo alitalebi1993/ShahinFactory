@@ -68,5 +68,11 @@ namespace FactoryShahin
             FormBase F = new FormBase(new ShahinFactoryDb(), typeof(Customer), "", null, true, "تعریف مشتری");
             F.ShowDialog();
         }
+
+        private void ثبتمحصولToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormRegisterProduct F = new FormRegisterProduct();
+            F.ShowDialog();
+        }
     }
 }

@@ -6,12 +6,20 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace System.Windows.Forms
 {
     class Utility
     {
+        public static void SetDataSourcToComboBox<T>(ComboBox Combo) where T : class,new()
+        {
+            T Entity =new T();
+            FactoryShahin.ShahinFactoryDb db = new FactoryShahin.ShahinFactoryDb();
+            var list = db.Set<T>().ToList();
+            Combo.DataSource = list;
+            Combo.ValueMember = Entity.GetType().GetProperties().Where(p => p.Name.Contains("ID")).FirstOrDefault().Name;
+            Combo.DisplayMember = Entity.GetType().GetProperties().Where(p => p.Name.Contains("Name")).FirstOrDefault().Name;
+        }
         public static string ConvertDateToHijrie2(DateTime date)
         {
             PersianCalendar P = new PersianCalendar();
@@ -28,9 +36,9 @@ namespace System.Windows.Forms
         {
             foreach (var item in list)
             {
-                if (item.Text == "" && item.AccessibleDescription != "")
+                if (item.Text == "" && item.AccessibleDescription != "" && item.AccessibleDescription!=null)
                 {
-                    //BeheshtMBox.Show(item.AccessibleDescription + " " + "نمیتواند خالی بماند !", "هشدار", BeheshtMBox.Icon.Warning, BeheshtMBox.MessageType.OK);
+                    MessageBox.Show(item.AccessibleDescription + " " + "نمیتواند خالی بماند !", "هشدار",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                     return false;
                 }
             }
@@ -144,6 +152,15 @@ namespace System.Windows.Forms
         public MyGridview()
         {
             this.AutoGenerateColumns = false;
+            this.BackgroundColor = System.Drawing.Color.White;
+            this.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            this.RowHeadersVisible = false;
+            this.AllowUserToAddRows = false;
+            this.EnableHeadersVisualStyles = false;
+            this.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            this.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.White;
+            this.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.ColumnHeadersDefaultCellStyle.ForeColor = System.Drawing.Color.White;
             this.CellPainting += MyGridview_CellPainting;
 
         }
@@ -152,11 +169,11 @@ namespace System.Windows.Forms
         {
             if (e.RowIndex == -1)
             {
-                //e.Paint(e.CellBounds, DataGridViewPaintParts.All);
-                //Image m = new Bitmap(ShahinShoese.Properties.Resources.images, new Size(e.CellBounds.Width, e.CellBounds.Height));
-                //e.Graphics.DrawImage(m, e.CellBounds);
-                //e.Paint(e.CellBounds, DataGridViewPaintParts.ContentForeground);
-                //e.Handled = true;
+                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+                Image m = new Bitmap(FactoryShahin.Properties.Resources.image, new Size(e.CellBounds.Width, e.CellBounds.Height));
+                e.Graphics.DrawImage(m, e.CellBounds);
+                e.Paint(e.CellBounds, DataGridViewPaintParts.ContentForeground);
+                e.Handled = true;
             }
         }
     }
